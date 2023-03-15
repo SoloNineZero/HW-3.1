@@ -6,13 +6,22 @@
 //
 
 import UIKit
+import SpringAnimation
 
 class MainViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    // MARK: IBOutlets
+    @IBOutlet var animationView: SpringView!
+    
+    @IBOutlet var presetValueLabel: UILabel!
+    @IBOutlet var curveValueLabel: UILabel!
+    @IBOutlet var forceValueLabel: UILabel!
+    @IBOutlet var durationValueLabel: UILabel!
+    @IBOutlet var delayValueLabel: UILabel!
+    
+    // MARK: IBActions
+    @IBAction func startButtonAction(_ sender: UIButton) {
     }
+    
 
 }

@@ -128,6 +128,9 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="startButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HbX-1x-6KI"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -141,6 +144,14 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="V1r-4W-CPx" secondAttribute="bottom" constant="40" id="igB-b0-C3U"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="animationView" destination="FSl-fC-2ya" id="0CV-fr-6Hc"/>
+                        <outlet property="curveValueLabel" destination="Tjw-7Y-Vzk" id="UI4-sz-Sjn"/>
+                        <outlet property="delayValueLabel" destination="mV1-hs-n2L" id="GWo-U4-xz1"/>
+                        <outlet property="durationValueLabel" destination="HQm-Dx-xl4" id="md7-1g-x6E"/>
+                        <outlet property="forceValueLabel" destination="pKD-tw-Kbe" id="066-sW-Vdv"/>
+                        <outlet property="presetValueLabel" destination="08R-wS-aJZ" id="aW9-lh-sWd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -13,7 +13,7 @@ class MainViewController: UIViewController {
     // MARK: IBOutlets
     @IBOutlet var animationView: SpringView!
     
-    @IBOutlet var presetValueLabel: UILabel!
+    @IBOutlet var nameLabel: UILabel!
     @IBOutlet var curveValueLabel: UILabel!
     @IBOutlet var forceValueLabel: UILabel!
     @IBOutlet var durationValueLabel: UILabel!

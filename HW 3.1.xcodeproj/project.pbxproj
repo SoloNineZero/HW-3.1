@@ -14,6 +14,8 @@
 		A80DA45A29C2531A000BCCC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A80DA45829C2531A000BCCC2 /* LaunchScreen.storyboard */; };
 		A80DA46329C25991000BCCC2 /* SpringAnimation in Frameworks */ = {isa = PBXBuildFile; productRef = A80DA46229C25991000BCCC2 /* SpringAnimation */; };
 		A80DA47029C26161000BCCC2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80DA46F29C26161000BCCC2 /* MainViewController.swift */; };
+		A80DA47329C2631F000BCCC2 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80DA47229C2631F000BCCC2 /* Animation.swift */; };
+		A80DA47929C264E8000BCCC2 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80DA47829C264E8000BCCC2 /* DataStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		A80DA45929C2531A000BCCC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A80DA45B29C2531A000BCCC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A80DA46F29C26161000BCCC2 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		A80DA47229C2631F000BCCC2 /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
+		A80DA47829C264E8000BCCC2 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 		A80DA44C29C25319000BCCC2 /* HW 3.1 */ = {
 			isa = PBXGroup;
 			children = (
+				A80DA47729C264D1000BCCC2 /* Services */,
+				A80DA47129C26308000BCCC2 /* Models */,
 				A80DA46C29C260F4000BCCC2 /* App */,
 				A80DA46D29C260FC000BCCC2 /* ViewControllers */,
 				A80DA46E29C26108000BCCC2 /* Storyboards */,
@@ -91,6 +97,22 @@
 				A80DA45829C2531A000BCCC2 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		A80DA47129C26308000BCCC2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A80DA47229C2631F000BCCC2 /* Animation.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A80DA47729C264D1000BCCC2 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A80DA47829C264E8000BCCC2 /* DataStore.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,6 +194,8 @@
 			files = (
 				A80DA47029C26161000BCCC2 /* MainViewController.swift in Sources */,
 				A80DA44E29C25319000BCCC2 /* AppDelegate.swift in Sources */,
+				A80DA47329C2631F000BCCC2 /* Animation.swift in Sources */,
+				A80DA47929C264E8000BCCC2 /* DataStore.swift in Sources */,
 				A80DA45029C25319000BCCC2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

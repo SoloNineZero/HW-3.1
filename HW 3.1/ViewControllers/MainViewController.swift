@@ -8,10 +8,10 @@
 import UIKit
 import SpringAnimation
 
-class MainViewController: UIViewController {
+final class MainViewController: UIViewController {
 
     // MARK: IBOutlets
-    @IBOutlet var animationView: SpringView!
+    @IBOutlet var colorView: SpringView!
     
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var curveValueLabel: UILabel!
@@ -19,9 +19,35 @@ class MainViewController: UIViewController {
     @IBOutlet var durationValueLabel: UILabel!
     @IBOutlet var delayValueLabel: UILabel!
     
-    // MARK: IBActions
-    @IBAction func startButtonAction(_ sender: UIButton) {
+    // MARK: Private properties
+    private var animate = Animation.getRandomAnimation()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
     }
     
-
+    // MARK: IBActions
+    @IBAction func startButtonAction(_ sender: UIButton) {
+        settingLabelsOnColorView()
+        
+        colorView.animation = animate.name
+        colorView.curve = animate.curve
+        colorView.force = CGFloat(animate.force)
+        colorView.duration = CGFloat(animate.duration)
+        colorView.delay = CGFloat(animate.delay)
+        colorView.animate()
+        
+        animate = Animation.getRandomAnimation()
+        sender.setTitle("Run '\(animate.name)'", for: .normal)
+    }
+    
+    // MARK: Private func
+    private func settingLabelsOnColorView() {
+        nameLabel.text = animate.name
+        curveValueLabel.text = animate.curve
+        forceValueLabel.text = String(format: "%.02f", animate.force)
+        durationValueLabel.text = String(format: "%.02f", animate.duration)
+        delayValueLabel.text = String(format: "%.02f", animate.delay)
+    }
 }

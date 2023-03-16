@@ -152,6 +152,7 @@
                         <outlet property="durationValueLabel" destination="HQm-Dx-xl4" id="md7-1g-x6E"/>
                         <outlet property="forceValueLabel" destination="pKD-tw-Kbe" id="066-sW-Vdv"/>
                         <outlet property="nameLabel" destination="08R-wS-aJZ" id="VBH-XH-j6D"/>
+                        <outlet property="runButton" destination="V1r-4W-CPx" id="zhw-CJ-5PS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

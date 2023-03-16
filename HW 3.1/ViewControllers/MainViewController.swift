@@ -19,12 +19,16 @@ final class MainViewController: UIViewController {
     @IBOutlet var durationValueLabel: UILabel!
     @IBOutlet var delayValueLabel: UILabel!
     
+    @IBOutlet var runButton: UIButton!
+    
     // MARK: Private properties
     private var animate = Animation.getRandomAnimation()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         settingLabelsOnColorView()
+        animate = Animation.getRandomAnimation()
+        runButton.setTitle("Run '\(animate.name)'", for: .normal)
     }
     
     // MARK: IBActions

@@ -24,11 +24,11 @@ final class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        settingLabelsOnColorView()
     }
     
     // MARK: IBActions
-    @IBAction func startButtonAction(_ sender: UIButton) {
+    @IBAction func runButtonAction(_ sender: UIButton) {
         settingLabelsOnColorView()
         
         colorView.animation = animate.name

@@ -10,7 +10,7 @@ import SpringAnimation
 
 final class MainViewController: UIViewController {
 
-    // MARK: IBOutlets
+    // MARK: - IBOutlets
     @IBOutlet var colorView: SpringView!
     
     @IBOutlet var nameLabel: UILabel!
@@ -21,9 +21,10 @@ final class MainViewController: UIViewController {
     
     @IBOutlet var runButton: UIButton!
     
-    // MARK: Private properties
+    // MARK: - Private properties
     private var animate = Animation.getRandomAnimation()
     
+    // MARK: Override function
     override func viewDidLoad() {
         super.viewDidLoad()
         settingLabelsOnColorView()
@@ -31,7 +32,7 @@ final class MainViewController: UIViewController {
         runButton.setTitle("Run '\(animate.name)'", for: .normal)
     }
     
-    // MARK: IBActions
+    // MARK: - IBActions
     @IBAction func runButtonAction(_ sender: UIButton) {
         settingLabelsOnColorView()
         
@@ -46,7 +47,7 @@ final class MainViewController: UIViewController {
         sender.setTitle("Run '\(animate.name)'", for: .normal)
     }
     
-    // MARK: Private func
+    // MARK: - Private func
     private func settingLabelsOnColorView() {
         nameLabel.text = animate.name
         curveValueLabel.text = animate.curve

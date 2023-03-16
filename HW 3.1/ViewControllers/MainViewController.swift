@@ -14,10 +14,6 @@ final class MainViewController: UIViewController {
     @IBOutlet var colorView: SpringView!
     
     @IBOutlet var nameLabel: UILabel!
-    @IBOutlet var curveValueLabel: UILabel!
-    @IBOutlet var forceValueLabel: UILabel!
-    @IBOutlet var durationValueLabel: UILabel!
-    @IBOutlet var delayValueLabel: UILabel!
     
     @IBOutlet var runButton: UIButton!
     
@@ -28,7 +24,6 @@ final class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         settingLabelsOnColorView()
-        animate = Animation.getRandomAnimation()
         runButton.setTitle("Run '\(animate.name)'", for: .normal)
     }
     
@@ -38,9 +33,9 @@ final class MainViewController: UIViewController {
         
         colorView.animation = animate.name
         colorView.curve = animate.curve
-        colorView.force = CGFloat(animate.force)
-        colorView.duration = CGFloat(animate.duration)
-        colorView.delay = CGFloat(animate.delay)
+        colorView.force = animate.force
+        colorView.duration = Double(animate.duration)
+        colorView.delay = Double(animate.delay)
         colorView.animate()
         
         animate = Animation.getRandomAnimation()
@@ -49,10 +44,12 @@ final class MainViewController: UIViewController {
     
     // MARK: - Private func
     private func settingLabelsOnColorView() {
-        nameLabel.text = animate.name
-        curveValueLabel.text = animate.curve
-        forceValueLabel.text = String(format: "%.02f", animate.force)
-        durationValueLabel.text = String(format: "%.02f", animate.duration)
-        delayValueLabel.text = String(format: "%.02f", animate.delay)
+        nameLabel.text = animate.description
     }
 }
+
+
+
+
+  
+    

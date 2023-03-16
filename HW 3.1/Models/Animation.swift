@@ -8,16 +8,26 @@
 struct Animation {
     let name: String
     let curve: String
-    let force: Float
-    let duration: Float
-    let delay: Float
+    let force: Double
+    let duration: Double
+    let delay: Double
+    
+    var description: String {
+        return """
+        \(name)
+        \(curve)
+        \(String(format: "%.02f", force))
+        \(String(format: "%.02f", duration))
+        \(String(format: "%.02f", delay))
+        """
+    }
     
     static func getRandomAnimation() -> Animation {
         Animation(
-            name: DataStore.shared.animations.randomElement()?.rawValue ?? "slideUp",
+            name: DataStore.shared.animations.randomElement()?.rawValue ?? "pop",
             curve: DataStore.shared.animations.randomElement()?.rawValue ?? "easeInOut",
-            force: Float.random(in: 1...1.5),
-            duration: Float.random(in: 1...1.5),
+            force: Double.random(in: 1...1.5),
+            duration: Double.random(in: 1...1.5),
             delay: 0.3
         )
     }
